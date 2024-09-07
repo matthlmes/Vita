@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vita | Dashboard</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="images/logo/favicon/vita-favicon-color.png"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    </head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <!-- Displays the current users details -->
+    <section id="userInfo">
+        <h1>Username: <%= user %></h1>
+        <h1>Email: <%= email %></h1>
+        <h1>User ID: <%= id %></h1>
+    </section>
+    <section id="userUpdateForms">  
+        <!-- Updates users username -->
+        <form action="/updateUsername" method="POST">
+            <label>Update Username</label><br>
+            <input type="text" placeholder="Username" name="updateUsername"><br>
+            <button type="submit">Update</button>
+        </form>
+        <!-- Updates users profile pic -->
+        <form action="/updateProfilePic" method="POST">
+            <label>Update Profile Picture</label><br>
+            <input type="text" placeholder="Profile Pic (URL)" name="updatePPic"><br>
+            <button type="submit">Update</button>
+        </form>
+        <!-- Updates users background pic -->
+        <form action="/updateBackgroundPic" method="POST">
+            <label>Update Background Picture</label><br>
+            <input type="text" placeholder="Background" name="updateBackground"><br>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

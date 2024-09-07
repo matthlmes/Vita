@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vita | Dashboard</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="images/logo/favicon/vita-favicon-color.png"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="scripts/news.js"></script>
+    </head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <!-- CREATE POST SECTION -->
+    <section id="createPost">
+        <img class="profileIconCP" src="<%- profilepic %>" alt="users profile picture">
+        <button onclick="openCreatePost()" id="createPostBtn">What's on your mind?</button>
+    </section>
+    <section id="createPostPopUp">
+        <form action="/addPost" method="POST">
+            <div class="postDetails">
+                <input type="text" placeholder="Title" name="title">
+                <input type="text" placeholder="Header Image" name="headerImg">
+                <select name="category">
+                    <option value="news" name="News">News</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="food & drink">Food & Drink</option>
+                    <option value="sports">Sports</option>
+                </select>
+                <textarea name="description" rows="10" cols="90"></textarea>
+            </div>
+            <div class="postButtons">
+                <button type="submit">Publish</but>
+            </div>
+        </form>
+        <button onclick="closeCreatePost()" id="closeCreatePostBtn">Close</button>
+    </section>
+
+    <!-- DISPLAY USERS ARTICLES -->
+    <section class="newsArticle" id="newsArticle">
+        <% posts.forEach(function(post) { %>
+            <div class="article" id="article">
+                <div class="newsArticleImg" id="articleImg"><img onerror="this.style.display='none'" src="<%= post.headerImg %>" alt=""></div>
+                    <div class="title"><h1><%= post.title %></h1></div>
+                    <div class="category"><p><%= post.category %></p></div>
+                    <div class="description"><p><%= post.description %></p></div>
+                    <div class="articleFooter">
+                        <div class="author">
+                            <img src="<%- post.authorPic %>" alt="profie picture">
+                            <a href="<%- post.authorURL %>">
+                                <p><%= post.Author %></p>
+                            </a>
+                        </div>
+                        <div>
+                            <p><%= post.published.slice(0 , 10) %></p>
+                        </div>
+                    </div>
+            </div>
+        <% }); %>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+<!-- 
+⠀⠀⠀⠀⠀⠀⠀⢀⣀⠤⠖⠲⠦⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣟⡛⠓⠢⢤⣀⡠⠤⠾⠷⠒⠢⠤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⣟⣁⣀⣈⠉⠉⢲⠋⢠⠔⢲⣶⡖⠒⣶⣌⢹⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣶⣿⣋⣁⣀⠈⠛⠿⢾⣦⠘⠒⢊⣹⣿⣶⣴⠋⢹⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠛⠿⢟⣑⡛⠿⢽⣒⠢⢌⣓⣦⡽⣄⣀⣠⣼⡷⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡠⠴⠛⠛⠓⠿⠷⣦⡾⠛⠓⠀⠘⠻⠧⢤⣀⠀⣀⣤⣶⡖⠲⣄⠀
+⠀⠀⢠⠞⠁⣠⠤⠖⠒⠒⢲⡾⠁⠁⣠⠖⠒⠲⠤⣀⠀⢸⣿⠛⠁⠀⠈⠳⡌⠄
+⡖⠒⠛⠲⠾⣅⠐⠛⠯⣕⣿⠀⠀⢰⠇⠀⠀⠀⠀⢨⠇⠀⡘⠀⠀⠀⢀⡠⢧⠗
+⢇⠀⠀⠀⢀⡟⠫⢇⣐⠲⣿⠀⠀⢸⡄⠀⠀⠀⢀⠏⠀⢠⠇⠀⠀⠀⠸⣄⡤⠃
+⠈⠑⠒⠒⠊⠀⠀⠀⠀⢹⣿⣄⠀⠀⠓⠒⠒⠖⠋⠀⣰⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⠔⠋⣁⡽⢆⠀⠀⠀⠀⢀⣿⢿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡠⠊⣡⠖⠋⠁⠀⠀⠉⠓⠒⠋⠁⠸⡈⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡎⠀⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠘⠦⣀⠀⠀⣀⣀⠀⠀⠀
+⣾⠉⠉⠉⠉⠉⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⢄⣽⡭⠥⠼⠃⠀⠀
+⠈⠉⠒⠒⠚⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ -->

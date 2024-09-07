@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vita | <%- user %></title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/logo/favicon/vita-favicon-color.png"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="navLogo">
+            <img src="/images/logo/vita-high-resolution-logo-white-transparent.png" alt="abz digital group logo in black">
+        </div>
+        <div id="navBar">
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/weather">Weather</a></li>
+                    <img onclick="operateMenu()" id="profileIcon" src="<%- profilepic %>" alt="users profile picture">
+                </ul>
+            </nav>
+            <section id="userMenu">
+                <ul class="subNav">
+                    <li class="username"><h3><%= user %></h3></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/settings">Settings</a></li> <!-- THIS WILL BE ADDED NEXT SEMESTER-->
+                    <li><a href="/logout">Log Out</a></li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <section class="userBanner">
+        <div class="backgroundPic">
+            <img id="backgroundPic" src="<%- bpic %>" alt="Users background picture">
+        </div>
+        <div class="profilePic">
+            <img id="profilePic" src="<%- ppic %>" alt="Users profile picture">
+        </div>
+        <div class="userInfo">
+            <h1 id="username"><%= user %></h1>
+            <h3><span>547</span> Friends - <span>0</span> Posts</h3>
+            <!-- <form action="/follow" method="POST">
+                <button type="submit">Follow</button>
+            </form> -->
+            
+        </div>
+    </section>
+
+    <section>
+        <div class="separationLine">
+            <hr>
+        </div>
+    </section>
+    <!-- DISPLAYS USER CREATED POSTS -->
+    <section class="usersPosts">
+        <% posts.forEach(function(post) { %>
+            <div class="postContent">
+                    <div class="postContentImg"><img onerror="this.style.display='none'" src="<%= post.headerImg %>" alt=""></div>
+                    <div class="title"><h1><%= post.title %></h1></div>
+                    <div class="category"><p><%= post.category %></p></div>
+                    <div class="description"><p><%= post.description %></p></div>
+                    <div class="postFooter">
+                        <div class="author">
+                            <img src="<%- ppic %>" alt="profie picture">
+                            <p><%= post.Author %></p>
+                        </div>
+                        <div>
+                            <p><%= post.published %></p>
+                        </div>
+                    </div>
+            </div>
+        <% }); %>
+    </section>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

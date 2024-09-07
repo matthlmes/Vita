@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vita</title>
+    <link rel="stylesheet" href="styles/main.css">  
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" type="image/png" href="images/logo/favicon/vita-favicon-color.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/warpjs@1.0.8/dist/warp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opentype.js/1.1.0/opentype.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    <body>
+        <header class="indexHeader">
+            <div id="navLogo">
+                <img src="images/logo/vita-high-resolution-logo-transparent.png" alt="">
+            </div>
+            <div id="navBar">
+                <nav>
+                    <ul>
+                        <li><button onclick="document.getElementById('id01').style.display='block'">Log-in</button></li>
+                        <li><button onclick="document.getElementById('id02').style.display='block'">Sign-up</button></li>
+                    </ul>
+            
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="hero">
+                    <video autoplay muted loop>
+                        <source src="videos/pexels-ron-lach-9654078 (720p).mp4" type="video/mp4">
+                    </video>
+                    <!-- <img  id=back-img src="images/index-Background.jpg" alt="Be Brilliant image"> -->
+                    <div id="wavytxt"></div>
+                </section>
+
+                <section class="middle">
+                    <div id="blog-section">
+                            <div class="blogs-img">
+                                <img id="blog-img" src="images/blog.svg" alt="Blog Image">
+                            </div>
+                            <div class="blogs-text">
+                                <h1>Create Blogs</h1>
+                                <p>The blog page contains articles about a variety of topics, including technology, sports, and personal development. 
+                                    Users can write each article in a conversational style and try to make them as informative and engaging as possible. 
+                                    The goal of the blog page is to create an informative and entertaining space for readers to enjoy reading and help them learn something new.</p>
+                            </div>
+                        </div>
+
+                        
+                        <div id="weather-section">
+                            <div class="weather-text">
+                                <h1>Use the Weather App</h1>
+                                <p>Our weather page is your one-stop shop for all things weather-related in your location. 
+                                    You'll find current weather conditions, 3 hourly forecast and 4-day forecasts, humidity, visibility, and UV index information.</p>
+                            </div>
+                            <div class="weather-img">
+                                <img id="weather-img" src="images/weather.svg" alt="Weather Image">
+                            </div>
+                        </div>
+                </section>
+
+
+            </div>
+                <!-- Login Popup -->
+                <div id="id01" class="modal">
+  
+                    <form class="modal-content animate" action="/dologin" method="POST">
+                      <div class="login-container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                          
+                        <button type="submit">Login</button>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                      </div>
+                  
+                      <div class="login-container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!--Sign-up Popup-->
+                <div id="id02" class="modal">
+  
+                    <form class="modal-content animate" action="/dosignup" method="POST">
+                      <div class="login-container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" name="email" required>
+
+                        <label for="picture"><b>Profile Picture</b></label>
+                        <input type="text" placeholder="Enter URL" name="picture" required>
+                          
+                        <button type="submit">Sign-Up</button>
+                      </div>
+                  
+                      <div class="login-container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </body>
+
+</html>

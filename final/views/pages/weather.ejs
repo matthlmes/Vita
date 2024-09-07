@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vita | Weather</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo/favicon/vita-favicon-color.png"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/WeatherPageScript.js"></script>
+</head>
+<body class = "WeatherPage">
+  <header>
+    <%- include('../partials/header') %>
+  </header>
+  <main>
+    <div class="container">
+
+      <!-- Current forecast start-->
+      <section id="clouds">
+        <div id="circle-div">
+          <div class="weather-info">
+            <div class="place"><h1></h1></div>
+            <div class="country"><h4></h4></div>
+            <div class="temperature"></div>
+            <div class="forecast-weather" id="current-weather-type"><h4></h4></div>
+          </div>
+        </div>
+    </section>
+
+      <!-- Hourly forecast start-->
+      <div class="forecast">
+        <h3>3 Hourly Forecast For Today</h3>
+        <div class="forecast-item" id="parent0">
+          <div class="forecast-day" id="hour0"></div>
+          <div class="forecast-temperature" id="hour-temp0"></div>
+        </div>
+
+        <div class="forecast-item" id="parent1">
+          <div class="forecast-day" id="hour1"></div>
+          <div class="forecast-temperature" id="hour-temp1"></div>
+        </div>
+
+        <div class="forecast-item" id="parent2">
+          <div class="forecast-day" id="hour2"></div>
+          <div class="forecast-temperature" id="hour-temp2"></div>
+        </div>
+        <div class="forecast-item" id="parent3">
+          <div class="forecast-day" id="hour3"></div>
+          <div class="forecast-temperature" id="hour-temp3"></div>
+        </div>
+        <div class="forecast-item" id="parent4">
+          <div class="forecast-day" id="hour4"></div>
+          <div class="forecast-temperature" id="hour-temp4"></div>
+        </div>
+        <div class="forecast-item" id="parent5">
+          <div class="forecast-day" id="hour5"></div>
+          <div class="forecast-temperature" id="hour-temp5"></div>
+        </div>
+        <div class="forecast-item" id="parent6">
+          <div class="forecast-day" id="hour6"></div>
+          <div class="forecast-temperature" id="hour-temp6"></div>
+        </div>
+        <div class="forecast-item" id="parent7">
+          <div class="forecast-day" id="hour7"></div>
+          <div class="forecast-temperature" id="hour-temp7"></div>
+        </div>
+      </div>
+
+      <!-- 4 Day forecast start-->
+      <div class="weekly-forecast">
+        <h3>4 Day Forecast</h3>
+
+        <div class="forecast-item">
+          <div class="forecast-day" id="Day1-Value"></div>
+          <div class="forecast-weather" id="Day-img0"></div>
+          <div class="forecast-weather" id="Day1-Weather-Type"></div>
+        </div>
+
+        <div class="forecast-item">
+          <div class="forecast-day" id="Day2-Value"></div>
+          <div class="forecast-weather" id="Day-img1"></div>
+          <div class="forecast-weather" id="Day2-Weather-Type"></div>
+        </div>
+
+        <div class="forecast-item">
+          <div class="forecast-day" id="Day3-Value"></div>
+          <div class="forecast-weather" id="Day-img2"></div>
+          <div class="forecast-weather" id="Day3-Weather-Type"></div>
+        </div>
+
+        <div class="forecast-item">
+          <div class="forecast-day" id="Day4-Value"></div>
+          <div class="forecast-weather" id="Day-img3"></div>
+          <div class="forecast-weather" id="Day4-Weather-Type"></div>
+        </div>
+
+      </div>
+
+      <!-- Displays Visibility, UV Index and Humidity-->
+      <div class="forecast-bottom">
+          <div class="forecast-item" id="Visibility">
+            <h3>Visibility</h3>
+            <div class="level" id="visibilityValue"></div>
+            <div class="num" id="visibility"></div>
+          </div>
+
+          <div class="forecast-item" id="UV">
+            <h3>UV Index</h3>
+            <div class="num" id="UVvalueNum"></div>
+            <div class="level" id="UVvalue"></div>
+          </div>
+
+          <div class="forecast-item" id="Humidity">
+            <h3>Humidity</h3>
+            <div class="num" id="HumidityVal"></div>
+            <div class="level" id="HumidityDesc"></div>
+          </div>
+      </div>
+      <!-- Container end-->
+    </div>
+  </main>
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

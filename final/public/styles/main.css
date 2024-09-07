@@ -1,0 +1,705 @@
+/* CSS DOCUMENT  */
+/* GROUP - THE CORNER */
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@font-face {
+  font-family: vitaFont;
+  src: url(MuseoModerno\ Regular.ttf);
+}
+
+/*///// BODY /////*/
+body{
+  font-family: 'Inter', sans-serif;
+  color: #282634;
+  width: 100%;
+  margin: 0;
+}
+
+/*///// HEADER CODE - STUART /////*/
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+#navLogo img{
+  width: 350px;
+  height: 150px;
+}
+
+#navBar nav img{
+  width: 50px;
+  height:50px;
+  border-radius: 100%;
+}
+
+#navBar nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#navBar nav li {
+  float: left;
+}
+
+#navBar nav li a {
+  color: #1f1f1f;
+  text-align: center;
+  padding: 3em 2em;
+  text-decoration: none;
+}
+
+/* ///// SUBNAV MENU ///// */
+#userMenu{
+  display:none;
+}
+
+#userMenu ul{
+display: flex;
+flex-direction: column;
+align-items: end;
+width: 100px;
+position: absolute;
+list-style-type: none;
+right: 10px; 
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+background-color: #ffffff;
+}
+
+#userMenu li{
+width: 100px;
+padding: 1em;
+text-align: center;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+background-color: #ffffff;
+}
+#userMenu li a{
+  color: #1f1f1f;
+  text-align: center;
+  text-decoration: none;
+}
+
+#userMenu .username{
+  background-color: #ffffff;
+opacity: 0.8;
+background-image: radial-gradient(#ff4057 0.5px, #ffffff 0.5px);
+background-size: 10px 10px;
+}
+
+
+
+
+
+/* ///// BILLYS CODE ///// */
+
+.userBanner .backgroundPic img{
+  position:absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 30em;
+  z-index: -1;
+}
+
+.userBanner .profilePic img{
+  position:relative;
+  width: 20em;
+  height: 20em;
+  margin-top: 20%;
+  margin-left:15%;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.userInfo{
+text-align: start;
+margin-left: 40%;
+margin-top: -10%;
+}
+
+.userInfo h1{
+font-size: 3em;
+}
+
+.profile-page .main{
+width: 100%;
+height: 30%;
+margin-top: 20%;
+}
+
+.separationLine{
+margin-top: 20%;
+}
+
+.separationLine hr{
+width: 80%;
+}
+
+#createPostProfile{
+display: flex;
+justify-content: center;
+margin-top: 5em;
+}
+
+#createPostProfile button{
+width: 40em;
+height: 3em;
+text-align: left;
+padding-left: 3em;
+border-color: #ffffff;
+border-style: none;
+border-radius: 2em;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+outline: none;
+cursor: pointer;
+}
+
+.userPosts{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.postContent{
+  margin-top: 5em;
+  background-color: #ffffff;
+  width: 30em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 1em 3em 1em 3em;
+}
+
+.postContent .title{
+  padding-top: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.postContent .category{
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.postContent .description{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.postContent .postContentImg img{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  width: 30em;
+  height: 20em;
+}
+
+.postContent .postFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.postContent .postFooter .author{
+  display: flex;
+  flex-direction: row;
+  pointer-events: none; /* DISABLES LINKS BEING SET IN AUTHOR NAME BY API */
+}
+
+.postContent .postFooter .author img{
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.postContent .postFooter .author a{
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------------*/
+
+/* STUARTS CODE --------------------------------------------------------*/
+
+/*///// DASHBOARD CODE /////*/
+
+/*///// CREATE POST  /////*/
+#createPost{
+  margin: auto;
+  width: 35vw;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+#createPost img{
+  margin-right: 20px;
+}
+#createPost button:hover{
+  transition: 1s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+#createPost:hover{
+  transition: 1s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+.profileIconCP{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+#createPost button{
+  width: 40em;
+  height: 3em;
+  text-align: left;
+  padding-left: 3em;
+  border-color: #ffffff;
+  border-style: none;
+  border-radius: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+#createPostPopUp{
+  margin: auto;
+  display: none;
+  width: 50em;
+  height: 30em;
+  background-color: #ffffff;
+  background-position: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+#createPostPopUp form{
+  margin-top: 2em;
+  margin: 2em;
+}
+#createPostPopUp button{
+  margin-left: 2em;
+  background-color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: #555;
+  cursor:pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+.postDetails{
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+.postDetails input[type=text]{
+  width: 15em;
+  padding: 0.5em;
+  border-width: 1px;
+  border-radius: 20px;
+}
+.postDetails select{
+  width: 15em;
+  padding: 0.5em;
+  border-width: 1px;
+  border-radius: 20px;
+}
+.postButtons button{
+  margin-left: 2em;
+  background-color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: #555;
+  cursor:pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+.postButtons button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*///// DASHBOARD ARTICLE  /////*/
+.article{
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 5em;
+  background-color: #ffffff;
+  width: 30em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+article:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.article a{
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+.article .title{
+  padding-top: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.article .category{
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.article .description{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.article .newsArticleImg img{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  width: 30em;
+  height: 20em;
+}
+
+.article .articleFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.article .articleFooter .author{
+  display: flex;
+  flex-direction: row;
+  /* pointer-events: none; DISABLES LINKS BEING SET IN AUTHOR NAME BY API */
+}
+.article .articleFooter .author img{
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.article .articleFooter .author a{
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+/* ///// SETTINGS PAGE CSS ///// */
+#userInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#userUpdateForms{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#userUpdateForms form button{
+  background-color: #ff4057;
+  color: #1f1f1f;
+  padding: 10px;
+  /* margin: 8px 0; */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+
+/*--------------------------------------------------------------------*/
+
+
+/* MATTS CODE --------------------------------------------------------*/
+
+/* ///// WEATHER PAGE CSS ///// */
+
+.WeatherPage .container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WeatherPage #circle-div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  height: 20em;
+  width: 20em;
+  background: linear-gradient(0deg, rgba(34,151,195,0.29192927170868344) 43%, rgba(34,151,195,0.586046918767507) 63%);
+  text-align: center;
+  justify-content: center;
+  margin-top: 5em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.WeatherPage .weather-info p{
+  font-weight: bold;
+}
+
+.WeatherPage .temperature {
+  font-size: 40px;
+}
+
+.WeatherPage .forecast, .weekly-forecast, .forecast-bottom {
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.WeatherPage .forecast-item {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
+.WeatherPage .forecast-day {
+  flex: 1;
+}
+
+.WeatherPage .forecast-temperature {
+  width: 50px;
+  text-align: center;
+}
+
+.WeatherPage .forecast-item {
+  display: inline-block;
+  text-align: center;
+  padding:1em;
+}
+
+.WeatherPage #clouds{
+  background-image: url("/images/clouds-background-2.png");
+  width:100%;
+  height: 30em;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+}
+
+.WeatherPage main{
+  background: linear-gradient(0deg, rgba(48,45,253,0.8157387955182073) 10%, rgba(34,151,195,0.5328256302521008) 45%, rgba(34,151,195,0.4683998599439776) 96%);
+  background-size: cover;
+  height:100%;
+}
+
+.WeatherPage #Visibility, #Humidity, #UV{
+  margin: 1em;
+  padding: 2em;
+  width:10em;
+}
+
+.WeatherPage .weekly-forecast, .forecast{
+  background-color:rgba(255,255,255, 0.8);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width:35%;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.WeatherPage #Visibility, #Humidity, #UV{
+  background-color:rgba(255,255,255, 0.8);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.WeatherPage #Day-img0, #Day-img1, #Day-img2, #Day-img3{
+  padding-top: 1em;
+}
+
+.WeatherPage #parent0, #parent1, #parent2, #parent3, #parent4, #parent5, #parent6, #parent7{
+  display: none;
+}
+
+.container{
+  width: 100%;
+}
+.indexHeader{
+  /* position:absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.indexHeader #navBar li{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ff4057;
+  font-family: vitaFont;
+  font-size: 18px;
+}
+.indexHeader #navBar li:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.hero video{
+  top: 0;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  
+}
+
+
+
+#back-img{
+  width:100%;
+  height:50em;
+  position: absolute;
+  z-index: -1;
+}
+
+#wavytxt{
+  padding-top: 47em;
+}
+
+.wavy { 
+    position: relative; 
+} 
+
+.wavy span { 
+    position: relative; 
+    display: inline-block; 
+    color: black; 
+    font-size: 2em; 
+    text-transform: uppercase; 
+    animation: animate 2s ease-in-out infinite; 
+    animation-delay: calc(0.1s * var(--i)); 
+} 
+
+.middle{
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+#blog-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15em;
+}
+
+.blogs-text{
+  margin-left: 5em;
+}
+
+#weather-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15em;
+  margin-bottom: 10em;
+}
+
+.weather-text{
+  margin-right: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------*/
+
+/*///// FOOTER CSS - STUART /////*/
+.footer p{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #c6c6c6;
+    text-align: center;
+}
+.vitaFooter{
+  font-family: vitaFont;
+}
+
+
+/* chat styling */
+
+#form {
+    background: #ff4057; padding: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 3rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+  }
+  #input {
+    border: none; padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    margin: 0.25rem;
+  }
+  #input:focus {
+    outline: none;
+  }
+  #form>button {
+    background: #333; border: none; padding: 0 1rem; margin: 0.25rem;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+  }
+  #messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #messages>li {
+    padding: 0.5rem 1rem;
+  }
+  #messages>li:nth-child(odd) {
+    background: #a7a7a7;
+  }
+
+  #form #username {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    background-color: #ff4057;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1f1f1f;
+  }

@@ -1,0 +1,5 @@
+{"_id":1,"email":"raimundo.gonçalves@example.com","login":{"username":"whitegorilla872","password":"butch"}, "age": "19"}
+{"_id":2,"email":"stephen.gonçalves@example.com","login":{"username":"NightOwl","password":"hello"}, "age": "19"}
+{"_id":3,"email":"paul.gonçalves@example.com","login":{"username":"Bookworm87","password":"world"}, "age": "34"}
+{"_id":4,"email":"rice.gonçalves@example.com","login":{"username":"SunnySideUp","password":"happy"}, "age": "18"}
+{"_id":5,"email":"gyoza.gonçalves@example.com","login":{"username":"CodeCat","password":"day"}, "age": "22"}
