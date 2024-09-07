@@ -10,3 +10,7 @@ Webpage consists of:
   - Weather Page, where the MET office API is called to get the current weather forecast
   - Chat Page, where users can chat with one another
   - Profile Pages, Where users can view their posts or others posts and follow other users
+
+The website was hosted using codio.
+
+(Re-upload as original repository is private)
