@@ -1,4 +1,4 @@
-# cm2104_DynamicWebDevelopment_Vita
+# Vita
 
 2nd year web development project "Vita". 
 
